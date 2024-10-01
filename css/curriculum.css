@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    background: url(/assets/02.png);
+    --white: #F7F7F7;
+    --black: #000000;
+    --purple: #640D5F;
+    --shandow: #464646;
+    --font: 'Lato', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem, 4rem;
+    
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background-color: linear-gradient(top bottom, #000, transparent);
+}
+
+.title {
+    color: var(--purple);
+    border-bottom: 0.6rem solid var(--shadow);
+    align-items: center;
+    padding: 8px 8px;
+    border-radius: 5px;
+}
