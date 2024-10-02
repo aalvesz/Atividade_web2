@@ -1,47 +1,205 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+
+}
 
 :root{
-    background: url(/assets/02.png);
     --white: #F7F7F7;
+    --white2: #E5D9F2;
     --black: #000000;
     --purple: #640D5F;
+    --purple2: #850F8D;
+    --purple3: #624E88;
     --shandow: #464646;
-    --font: 'Lato', sans-serif;
+    --font: "Fredoka", sans-serif;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem, 4rem;
-    
+html {
+    font-size: 60%;
+    overflow-x: hidden;
 }
 
-.banner{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    background-color: var(--black);
+    color: var(--white);
+
 }
 
-.banner::before{
-    content: "";
-    position: absolute;
+.header{
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 400px;
-    z-index: 1;
-    background-color: linear-gradient(top bottom, #000, transparent);
+    padding: 4rem 12% 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
 }
 
-.title {
+.logo{
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.logo span{
+    text-shadow: 0 0 25px var(--purple2);
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--purple2);
+    border-bottom: 3px solid var(--purple2);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
     color: var(--purple);
-    border-bottom: 0.6rem solid var(--shadow);
+    display: none;
+}
+
+
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+}
+
+.home{
+    display: flex;
     align-items: center;
-    padding: 8px 8px;
-    border-radius: 5px;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.span{
+    color: var(--purple);
+}
+
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+
+.home-content h1{
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    top: 3rem;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--shandow);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover{
+    box-shadow: 0 0 25px var(--purple),
+                0 0 50px var(--purple),
+                0 0 100px var(--purple)
+
+}
+
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+
+.social-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--purple2);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--purple);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icon a:hover{
+    color: var(--white);
+    transform: scale(1.3)translate(-5px);
+    box-shadow: 0 0 25px var(--purple);
+    background-color: var(--purple);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--purple);
+    box-shadow: 0 0 25px var(--purple3);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--white2);
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--purple);
+}
+
+.btn-group a:nth-of-type(2){
+    background-color: var(--black);
+    color: var(--purple);
+    border: 2px solid var(--shandow);
+    box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover{
+
 }
