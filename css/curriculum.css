@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -18,8 +19,10 @@
     --purple: #640D5F;
     --purple2: #850F8D;
     --purple3: #624E88;
+    --rose: #ED3EF7;
     --shandow: #464646;
     --font: "Fredoka", sans-serif;
+    --font2: "Montserrat" serif;
 }
 
 html {
@@ -39,7 +42,7 @@ body{
     left: 0;
     width: 100%;
     padding: 4rem 12% 4rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.392);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -145,10 +148,11 @@ section{
 }
 
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
+    font-family: var(--font2);
 }
 
 .social-icons a{
@@ -209,8 +213,8 @@ section{
 
 .btn-group a:nth-of-type(2):hover{
     box-shadow:  0 0 25px var(--purple3);
-    background-color: var(--purple2);
-    color: var(--black);
+    background-color: var(--purple3);
+    color: black;
 }
 
 .text-animation{
@@ -225,70 +229,71 @@ section{
 
 .text-animation span::before{
     content: "ADS";
-    color: var(--purple);
+    color: var(--purple2);
     animation: words 20s infinite;
 }
 
 .text-animation span::after{
-    content: "";
-    background-color: var(--white2);
+    background-color: rgba(0, 0, 0, 0.216);
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid var(--purple2);
     right: -8px;
-    animation: cursor 0.6 infinite, typing 20s steps(14) infinite;
+    animation: cursor 0.6 infinite, typing 20s steps
+    (14) infinite;
 }
 
-@keyframes cursor{
-    to{
-        border-left: 2px solid var(--purple);
-    }
+
+
+
+.experiencia{
+    padding: 8px;
+    margin: 25px;
+    background-color: #4646466d;
+    border-radius: 4px;
+
 }
 
-@keyframes words{
-    0%,
-    20%{
-        content: "Front-End Designer";
-    }
-    21%,
-    40%{
-        content: "Web Designer";
-    }
-    41%,
-    60%{
-        content: "UI / UX  Designer";
-    }
-    61%,
-    80%{
-        content: "Web Developer";
-    }
-    81%,
-    100%{
-        content: "Software Tester";
-    }
+
+.g-col-6{
+    display: flex;
+    align-items: center;
+    background-color: #850f8d70 ;
+    padding: 8px 8px 12px;
+    justify-content: center;
+    gap: 15px;
+    margin: 8px 12px;
+    border: 2px solid var(--purple3);
+    border-radius: 5px ;
 }
 
-@keyframes typing{
-    10%,
-    15%, 
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95%{
-        width: 0;
-    }
-    5%,
-    20%,
-    25%,
-    40%,
-    45%,
-    80%,
-    85%{
-        width: calc(100% + 8px);
-    }
+ h2{
+    display: flex;
+    font-size: 35px;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font2);
+}
+
+h4{
+    font-family: var(--font2);
+    font-size: 20px;
+
+}
+
+p{
+    font-family: var(--font2);
+    font-size: 16px;
+}
+
+image{
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+    max-width: 100%; /* Faz a imagem responsiva */
+    height: 110vh; /* Mantém a proporção da imagem */
+}
+
+.image02{
+    width: 695px; /* Altere para o tamanho desejado */
+    height: 426px; /* Mantém a proporção da imagem */
 }
